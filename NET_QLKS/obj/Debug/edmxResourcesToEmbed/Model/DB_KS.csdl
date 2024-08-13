@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HQT_QLKSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="FUNC_DVPH_Result">
+    <Property Name="TENDV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <Property Name="GIADV" Type="Double" />
+  </ComplexType>
+  <ComplexType Name="FUNC_FINDHDY_Result">
+    <Property Name="MAHD" Type="Int32" Nullable="false" />
+    <Property Name="MAPDP" Type="Int32" />
+    <Property Name="MANV" Type="Int32" />
+    <Property Name="NGAYLAP" Type="DateTime" />
+    <Property Name="THANHTIEN" Type="Double" />
+    <Property Name="TENPHONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYDAT" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="FUNC_FINDHDYED_Result">
+    <Property Name="MAHD" Type="Int32" Nullable="false" />
+    <Property Name="MAPDP" Type="Int32" />
+    <Property Name="MANV" Type="Int32" />
+    <Property Name="NGAYLAP" Type="DateTime" />
+    <Property Name="THANHTIEN" Type="Double" />
+  </ComplexType>
+  <ComplexType Name="FUNC_FINDKH_Result">
+    <Property Name="MAKH" Type="Int32" Nullable="false" />
+    <Property Name="TENKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CCCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <EntityType Name="CT_HOADON">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MADV" />
+    </Key>
+    <Property Name="MAHD" Type="Int32" Nullable="false" />
+    <Property Name="MADV" Type="Int32" Nullable="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <NavigationProperty Name="DICHVU" Relationship="Self.FK__CT_HOADON__MADV__5BE2A6F2" FromRole="CT_HOADON" ToRole="DICHVU" />
+    <NavigationProperty Name="HOADON" Relationship="Self.FK__CT_HOADON__MAHD__5CD6CB2B" FromRole="CT_HOADON" ToRole="HOADON" />
+  </EntityType>
+  <EntityType Name="DICHVU">
+    <Key>
+      <PropertyRef Name="MADV" />
+    </Key>
+    <Property Name="MADV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENDV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIADV" Type="Double" />
+    <NavigationProperty Name="CT_HOADON" Relationship="Self.FK__CT_HOADON__MADV__5BE2A6F2" FromRole="DICHVU" ToRole="CT_HOADON" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAPDP" Type="Int32" />
+    <Property Name="MANV" Type="Int32" />
+    <Property Name="NGAYLAP" Type="DateTime" Precision="0" />
+    <Property Name="THANHTIEN" Type="Double" />
+    <NavigationProperty Name="CT_HOADON" Relationship="Self.FK__CT_HOADON__MAHD__5CD6CB2B" FromRole="HOADON" ToRole="CT_HOADON" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__HOADON__MANV__5812160E" FromRole="HOADON" ToRole="NHANVIEN" />
+    <NavigationProperty Name="PHIEUDATPHONG" Relationship="Self.FK__HOADON__MAPDP__59063A47" FromRole="HOADON" ToRole="PHIEUDATPHONG" />
+  </EntityType>
+  <EntityType Name="KHACH">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CCCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PHIEUDATPHONGs" Relationship="Self.CT_PHIEUDATPHONG" FromRole="KHACH" ToRole="PHIEUDATPHONG" />
+  </EntityType>
+  <EntityType Name="LOAIPHONG">
+    <Key>
+      <PropertyRef Name="MALOAI" />
+    </Key>
+    <Property Name="MALOAI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENLOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SUCCHUA" Type="Int32" />
+    <NavigationProperty Name="PHONGs" Relationship="Self.FK__PHONG__MALOAI__46E78A0C" FromRole="LOAIPHONG" ToRole="PHONG" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="TENTK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PASSNV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QUEQUAN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MANHOMPQ" Type="Int32" />
+    <NavigationProperty Name="HOADONs" Relationship="Self.FK__HOADON__MANV__5812160E" FromRole="NHANVIEN" ToRole="HOADON" />
+    <NavigationProperty Name="NHOMQUYEN" Relationship="Self.FK__NHANVIEN__MANHOM__403A8C7D" FromRole="NHANVIEN" ToRole="NHOMQUYEN" />
+    <NavigationProperty Name="PHIEUDATPHONGs" Relationship="Self.FK__PHIEUDATPH__MANV__5070F446" FromRole="NHANVIEN" ToRole="PHIEUDATPHONG" />
+  </EntityType>
+  <EntityType Name="NHOMQUYEN">
+    <Key>
+      <PropertyRef Name="MANHOMPQ" />
+    </Key>
+    <Property Name="MANHOMPQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAQ" Type="Int32" />
+    <NavigationProperty Name="NHANVIENs" Relationship="Self.FK__NHANVIEN__MANHOM__403A8C7D" FromRole="NHOMQUYEN" ToRole="NHANVIEN" />
+    <NavigationProperty Name="PHANQUYEN" Relationship="Self.FK__NHOMQUYEN__MAQ__398D8EEE" FromRole="NHOMQUYEN" ToRole="PHANQUYEN" />
+  </EntityType>
+  <EntityType Name="PHANQUYEN">
+    <Key>
+      <PropertyRef Name="MAQ" />
+    </Key>
+    <Property Name="MAQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CHUCNANG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NHOMQUYENs" Relationship="Self.FK__NHOMQUYEN__MAQ__398D8EEE" FromRole="PHANQUYEN" ToRole="NHOMQUYEN" />
+  </EntityType>
+  <EntityType Name="PHIEUDATPHONG">
+    <Key>
+      <PropertyRef Name="MAPDP" />
+    </Key>
+    <Property Name="MAPDP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANV" Type="Int32" />
+    <Property Name="MAPH" Type="Int32" />
+    <Property Name="NGAYDAT" Type="DateTime" Precision="0" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HOADONs" Relationship="Self.FK__HOADON__MAPDP__59063A47" FromRole="PHIEUDATPHONG" ToRole="HOADON" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__PHIEUDATPH__MANV__5070F446" FromRole="PHIEUDATPHONG" ToRole="NHANVIEN" />
+    <NavigationProperty Name="PHONG" Relationship="Self.FK__PHIEUDATPH__MAPH__5165187F" FromRole="PHIEUDATPHONG" ToRole="PHONG" />
+    <NavigationProperty Name="KHACHes" Relationship="Self.CT_PHIEUDATPHONG" FromRole="PHIEUDATPHONG" ToRole="KHACH" />
+  </EntityType>
+  <EntityType Name="PHONG">
+    <Key>
+      <PropertyRef Name="MAPH" />
+    </Key>
+    <Property Name="MAPH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENPHONG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VITRI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIATHUE" Type="Double" />
+    <Property Name="TINHTRANG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MALOAI" Type="Int32" />
+    <NavigationProperty Name="LOAIPHONG" Relationship="Self.FK__PHONG__MALOAI__46E78A0C" FromRole="PHONG" ToRole="LOAIPHONG" />
+    <NavigationProperty Name="PHIEUDATPHONGs" Relationship="Self.FK__PHIEUDATPH__MAPH__5165187F" FromRole="PHONG" ToRole="PHIEUDATPHONG" />
+  </EntityType>
+  <Association Name="FK__CT_HOADON__MADV__5BE2A6F2">
+    <End Role="DICHVU" Type="Self.DICHVU" Multiplicity="1" />
+    <End Role="CT_HOADON" Type="Self.CT_HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DICHVU">
+        <PropertyRef Name="MADV" />
+      </Principal>
+      <Dependent Role="CT_HOADON">
+        <PropertyRef Name="MADV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CT_HOADON__MAHD__5CD6CB2B">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
+    <End Role="CT_HOADON" Type="Self.CT_HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="CT_HOADON">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MANV__5812160E">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MAPDP__59063A47">
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUDATPHONG">
+        <PropertyRef Name="MAPDP" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MAPDP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHONG__MALOAI__46E78A0C">
+    <End Role="LOAIPHONG" Type="Self.LOAIPHONG" Multiplicity="0..1" />
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIPHONG">
+        <PropertyRef Name="MALOAI" />
+      </Principal>
+      <Dependent Role="PHONG">
+        <PropertyRef Name="MALOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NHANVIEN__MANHOM__403A8C7D">
+    <End Role="NHOMQUYEN" Type="Self.NHOMQUYEN" Multiplicity="0..1" />
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOMQUYEN">
+        <PropertyRef Name="MANHOMPQ" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="MANHOMPQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHIEUDATPH__MANV__5070F446">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="PHIEUDATPHONG">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NHOMQUYEN__MAQ__398D8EEE">
+    <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="0..1" />
+    <End Role="NHOMQUYEN" Type="Self.NHOMQUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHANQUYEN">
+        <PropertyRef Name="MAQ" />
+      </Principal>
+      <Dependent Role="NHOMQUYEN">
+        <PropertyRef Name="MAQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHIEUDATPH__MAPH__5165187F">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="0..1" />
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MAPH" />
+      </Principal>
+      <Dependent Role="PHIEUDATPHONG">
+        <PropertyRef Name="MAPH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CT_PHIEUDATPHONG">
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="*" />
+    <End Role="KHACH" Type="Self.KHACH" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="NET_QLKS1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CT_HOADON" EntityType="Self.CT_HOADON" />
+    <EntitySet Name="DICHVUs" EntityType="Self.DICHVU" />
+    <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
+    <EntitySet Name="KHACHes" EntityType="Self.KHACH" />
+    <EntitySet Name="LOAIPHONGs" EntityType="Self.LOAIPHONG" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <EntitySet Name="NHOMQUYENs" EntityType="Self.NHOMQUYEN" />
+    <EntitySet Name="PHANQUYENs" EntityType="Self.PHANQUYEN" />
+    <EntitySet Name="PHIEUDATPHONGs" EntityType="Self.PHIEUDATPHONG" />
+    <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
+    <AssociationSet Name="FK__CT_HOADON__MADV__5BE2A6F2" Association="Self.FK__CT_HOADON__MADV__5BE2A6F2">
+      <End Role="DICHVU" EntitySet="DICHVUs" />
+      <End Role="CT_HOADON" EntitySet="CT_HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CT_HOADON__MAHD__5CD6CB2B" Association="Self.FK__CT_HOADON__MAHD__5CD6CB2B">
+      <End Role="HOADON" EntitySet="HOADONs" />
+      <End Role="CT_HOADON" EntitySet="CT_HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MANV__5812160E" Association="Self.FK__HOADON__MANV__5812160E">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="HOADON" EntitySet="HOADONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MAPDP__59063A47" Association="Self.FK__HOADON__MAPDP__59063A47">
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONGs" />
+      <End Role="HOADON" EntitySet="HOADONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHONG__MALOAI__46E78A0C" Association="Self.FK__PHONG__MALOAI__46E78A0C">
+      <End Role="LOAIPHONG" EntitySet="LOAIPHONGs" />
+      <End Role="PHONG" EntitySet="PHONGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NHANVIEN__MANHOM__403A8C7D" Association="Self.FK__NHANVIEN__MANHOM__403A8C7D">
+      <End Role="NHOMQUYEN" EntitySet="NHOMQUYENs" />
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHIEUDATPH__MANV__5070F446" Association="Self.FK__PHIEUDATPH__MANV__5070F446">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NHOMQUYEN__MAQ__398D8EEE" Association="Self.FK__NHOMQUYEN__MAQ__398D8EEE">
+      <End Role="PHANQUYEN" EntitySet="PHANQUYENs" />
+      <End Role="NHOMQUYEN" EntitySet="NHOMQUYENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHIEUDATPH__MAPH__5165187F" Association="Self.FK__PHIEUDATPH__MAPH__5165187F">
+      <End Role="PHONG" EntitySet="PHONGs" />
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONGs" />
+    </AssociationSet>
+    <AssociationSet Name="CT_PHIEUDATPHONG" Association="Self.CT_PHIEUDATPHONG">
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONGs" />
+      <End Role="KHACH" EntitySet="KHACHes" />
+    </AssociationSet>
+    <FunctionImport Name="FUNC_DVPH" IsComposable="true" ReturnType="Collection(HQT_QLKSModel.FUNC_DVPH_Result)">
+      <Parameter Name="MAHD" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FUNC_FINDHDY" IsComposable="true" ReturnType="Collection(HQT_QLKSModel.FUNC_FINDHDY_Result)">
+      <Parameter Name="TENPHONG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FUNC_FINDHDYED" IsComposable="true" ReturnType="Collection(HQT_QLKSModel.FUNC_FINDHDYED_Result)">
+      <Parameter Name="MAHD" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FUNC_FINDKH" IsComposable="true" ReturnType="Collection(HQT_QLKSModel.FUNC_FINDKH_Result)">
+      <Parameter Name="CCCD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_DANGNHAP" ReturnType="Collection(Int32)">
+      <Parameter Name="TENDK" Mode="In" Type="String" />
+      <Parameter Name="MATKHAU" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FINDDV" ReturnType="Collection(HQT_QLKSModel.PROC_FINDDV_Result)">
+      <Parameter Name="TENDV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FINDLOAI" ReturnType="Collection(HQT_QLKSModel.PROC_FINDLOAI_Result)">
+      <Parameter Name="TENLOAI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FINDNV" ReturnType="Collection(HQT_QLKSModel.PROC_FINDNV_Result)">
+      <Parameter Name="TENNV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FINDPDP" ReturnType="Collection(HQT_QLKSModel.PROC_FINDPDP_Result)">
+      <Parameter Name="MAPDP" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_FINDPHONG" ReturnType="Collection(HQT_QLKSModel.PROC_FINDPHONG_Result)">
+      <Parameter Name="TENPHONG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_THEMDV">
+      <Parameter Name="TENDV" Mode="In" Type="String" />
+      <Parameter Name="GIADV" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_THEMLOAI">
+      <Parameter Name="TENLOAI" Mode="In" Type="String" />
+      <Parameter Name="SUCCHUA" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_UPDICHVU">
+      <Parameter Name="MADV" Mode="In" Type="Int32" />
+      <Parameter Name="TENDV" Mode="In" Type="String" />
+      <Parameter Name="GIADV" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_UPLOAIPHONG">
+      <Parameter Name="MALOAI" Mode="In" Type="Int32" />
+      <Parameter Name="TENLOAI" Mode="In" Type="String" />
+      <Parameter Name="SUCCHUA" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_UPSTATE_PH">
+      <Parameter Name="TENPHONG" Mode="In" Type="String" />
+      <Parameter Name="TRANGTHAI" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="PROC_FINDDV_Result">
+    <Property Type="Int32" Name="MADV" Nullable="false" />
+    <Property Type="String" Name="TENDV" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="GIADV" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_FINDLOAI_Result">
+    <Property Type="Int32" Name="MALOAI" Nullable="false" />
+    <Property Type="String" Name="TENLOAI" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SUCCHUA" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_FINDNV_Result">
+    <Property Type="Int32" Name="MANV" Nullable="false" />
+    <Property Type="String" Name="TENNV" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NGAYSINH" Nullable="true" />
+    <Property Type="String" Name="TENTK" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PASSNV" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="QUEQUAN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EMAIL" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DIACHI" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MANHOMPQ" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_FINDPDP_Result">
+    <Property Type="Int32" Name="MAPDP" Nullable="false" />
+    <Property Type="String" Name="TENPHONG" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MANV" Nullable="true" />
+    <Property Type="DateTime" Name="NGAYDAT" Nullable="true" />
+    <Property Type="String" Name="TINHTRANG" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="PROC_FINDPHONG_Result">
+    <Property Type="Int32" Name="MAPH" Nullable="false" />
+    <Property Type="String" Name="TENPHONG" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VITRI" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="GIATHUE" Nullable="true" />
+    <Property Type="String" Name="TINHTRANG" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MALOAI" Nullable="true" />
+    <Property Type="String" Name="TENLOAI" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

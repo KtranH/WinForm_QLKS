@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC83DDF3-116A-4070-88AB-200D1B55F5C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NET_QLKS</RootNamespace>
+    <AssemblyName>NET_QLKS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net48\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CT_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT_HoaDon.Designer.cs">
+      <DependentUpon>CT_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT_PhieuDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT_PhieuDatPhong.Designer.cs">
+      <DependentUpon>CT_PhieuDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatPhong.Designer.cs">
+      <DependentUpon>DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dichvu.Designer.cs">
+      <DependentUpon>Dichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_HOADON.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_KS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_KS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_KS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_KS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_KS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DICHVU.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FUNC_DVPH_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FUNC_FINDHDYED_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FUNC_FINDHDY_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FUNC_FINDKH_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HOADON.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHACH.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOAIPHONG.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHANVIEN.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHOMQUYEN.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHANQUYEN.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEUDATPHONG.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHONG.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PROC_FINDDV_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PROC_FINDLOAI_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PROC_FINDNV_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PROC_FINDPDP_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PROC_FINDPHONG_Result.cs">
+      <DependentUpon>DB_KS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phong.Designer.cs">
+      <DependentUpon>Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TC_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TC_HD.Designer.cs">
+      <DependentUpon>TC_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TC_PDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TC_PDP.Designer.cs">
+      <DependentUpon>TC_PDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChinh.Designer.cs">
+      <DependentUpon>TrangChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TT_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TT_HD.Designer.cs">
+      <DependentUpon>TT_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TT_PDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TT_PDP.Designer.cs">
+      <DependentUpon>TT_PDP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CT_HoaDon.resx">
+      <DependentUpon>CT_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT_PhieuDatPhong.resx">
+      <DependentUpon>CT_PhieuDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatPhong.resx">
+      <DependentUpon>DatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dichvu.resx">
+      <DependentUpon>Dichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phong.resx">
+      <DependentUpon>Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TC_HD.resx">
+      <DependentUpon>TC_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TC_PDP.resx">
+      <DependentUpon>TC_PDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChinh.resx">
+      <DependentUpon>TrangChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TT_HD.resx">
+      <DependentUpon>TT_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TT_PDP.resx">
+      <DependentUpon>TT_PDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\DB_KS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_KS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DB_KS.edmx.diagram">
+      <DependentUpon>DB_KS.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\DB_KS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_KS.edmx</DependentUpon>
+      <LastGenOutput>DB_KS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DB_KS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_KS.edmx</DependentUpon>
+      <LastGenOutput>DB_KS.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

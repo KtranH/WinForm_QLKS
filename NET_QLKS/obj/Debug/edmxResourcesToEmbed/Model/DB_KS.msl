@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HQT_QLKSModelStoreContainer" CdmEntityContainer="NET_QLKS1Entities">
+    <EntitySetMapping Name="CT_HOADON">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.CT_HOADON">
+        <MappingFragment StoreEntitySet="CT_HOADON">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MADV" ColumnName="MADV" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DICHVUs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.DICHVU">
+        <MappingFragment StoreEntitySet="DICHVU">
+          <ScalarProperty Name="MADV" ColumnName="MADV" />
+          <ScalarProperty Name="TENDV" ColumnName="TENDV" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAPDP" ColumnName="MAPDP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHes">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.KHACH">
+        <MappingFragment StoreEntitySet="KHACH">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIPHONGs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.LOAIPHONG">
+        <MappingFragment StoreEntitySet="LOAIPHONG">
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+          <ScalarProperty Name="TENLOAI" ColumnName="TENLOAI" />
+          <ScalarProperty Name="SUCCHUA" ColumnName="SUCCHUA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="TENTK" ColumnName="TENTK" />
+          <ScalarProperty Name="PASSNV" ColumnName="PASSNV" />
+          <ScalarProperty Name="QUEQUAN" ColumnName="QUEQUAN" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="MANHOMPQ" ColumnName="MANHOMPQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHOMQUYENs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.NHOMQUYEN">
+        <MappingFragment StoreEntitySet="NHOMQUYEN">
+          <ScalarProperty Name="MANHOMPQ" ColumnName="MANHOMPQ" />
+          <ScalarProperty Name="MAQ" ColumnName="MAQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHANQUYENs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.PHANQUYEN">
+        <MappingFragment StoreEntitySet="PHANQUYEN">
+          <ScalarProperty Name="MAQ" ColumnName="MAQ" />
+          <ScalarProperty Name="CHUCNANG" ColumnName="CHUCNANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUDATPHONGs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.PHIEUDATPHONG">
+        <MappingFragment StoreEntitySet="PHIEUDATPHONG">
+          <ScalarProperty Name="MAPDP" ColumnName="MAPDP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MAPH" ColumnName="MAPH" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHONGs">
+      <EntityTypeMapping TypeName="HQT_QLKSModel.PHONG">
+        <MappingFragment StoreEntitySet="PHONG">
+          <ScalarProperty Name="MAPH" ColumnName="MAPH" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="GIATHUE" ColumnName="GIATHUE" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CT_PHIEUDATPHONG" TypeName="HQT_QLKSModel.CT_PHIEUDATPHONG" StoreEntitySet="CT_PHIEUDATPHONG">
+      <EndProperty Name="PHIEUDATPHONG">
+        <ScalarProperty Name="MAPDP" ColumnName="MAPDP" />
+      </EndProperty>
+      <EndProperty Name="KHACH">
+        <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionName="HQT_QLKSModel.Store.FUNC_DVPH" FunctionImportName="FUNC_DVPH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.FUNC_DVPH_Result">
+          <ScalarProperty Name="TENDV" ColumnName="TENDV" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="HQT_QLKSModel.Store.FUNC_FINDHDY" FunctionImportName="FUNC_FINDHDY">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.FUNC_FINDHDY_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAPDP" ColumnName="MAPDP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="HQT_QLKSModel.Store.FUNC_FINDHDYED" FunctionImportName="FUNC_FINDHDYED">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.FUNC_FINDHDYED_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAPDP" ColumnName="MAPDP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="HQT_QLKSModel.Store.FUNC_FINDKH" FunctionImportName="FUNC_FINDKH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.FUNC_FINDKH_Result">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_DANGNHAP" FunctionName="HQT_QLKSModel.Store.PROC_DANGNHAP" />
+    <FunctionImportMapping FunctionImportName="PROC_FINDDV" FunctionName="HQT_QLKSModel.Store.PROC_FINDDV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.PROC_FINDDV_Result">
+          <ScalarProperty Name="MADV" ColumnName="MADV" />
+          <ScalarProperty Name="TENDV" ColumnName="TENDV" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FINDLOAI" FunctionName="HQT_QLKSModel.Store.PROC_FINDLOAI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.PROC_FINDLOAI_Result">
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+          <ScalarProperty Name="TENLOAI" ColumnName="TENLOAI" />
+          <ScalarProperty Name="SUCCHUA" ColumnName="SUCCHUA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FINDNV" FunctionName="HQT_QLKSModel.Store.PROC_FINDNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.PROC_FINDNV_Result">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="TENTK" ColumnName="TENTK" />
+          <ScalarProperty Name="PASSNV" ColumnName="PASSNV" />
+          <ScalarProperty Name="QUEQUAN" ColumnName="QUEQUAN" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="MANHOMPQ" ColumnName="MANHOMPQ" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FINDPDP" FunctionName="HQT_QLKSModel.Store.PROC_FINDPDP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.PROC_FINDPDP_Result">
+          <ScalarProperty Name="MAPDP" ColumnName="MAPDP" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FINDPHONG" FunctionName="HQT_QLKSModel.Store.PROC_FINDPHONG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HQT_QLKSModel.PROC_FINDPHONG_Result">
+          <ScalarProperty Name="MAPH" ColumnName="MAPH" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="VITRI" ColumnName="VITRI" />
+          <ScalarProperty Name="GIATHUE" ColumnName="GIATHUE" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+          <ScalarProperty Name="TENLOAI" ColumnName="TENLOAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_THEMDV" FunctionName="HQT_QLKSModel.Store.PROC_THEMDV" />
+    <FunctionImportMapping FunctionImportName="PROC_THEMLOAI" FunctionName="HQT_QLKSModel.Store.PROC_THEMLOAI" />
+    <FunctionImportMapping FunctionImportName="PROC_UPDICHVU" FunctionName="HQT_QLKSModel.Store.PROC_UPDICHVU" />
+    <FunctionImportMapping FunctionImportName="PROC_UPLOAIPHONG" FunctionName="HQT_QLKSModel.Store.PROC_UPLOAIPHONG" />
+    <FunctionImportMapping FunctionImportName="PROC_UPSTATE_PH" FunctionName="HQT_QLKSModel.Store.PROC_UPSTATE_PH" />
+  </EntityContainerMapping>
+</Mapping>

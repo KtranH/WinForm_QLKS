@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f28cd1fdee8946308dcb4fcabd15fafe" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="HQT_QLKSModel.CT_HOADON" Width="1.5" PointX="12.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.DICHVU" Width="1.5" PointX="10.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.HOADON" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.KHACH" Width="1.5" PointX="12.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.LOAIPHONG" Width="1.5" PointX="6" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.NHANVIEN" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.NHOMQUYEN" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.PHANQUYEN" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.PHIEUDATPHONG" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HQT_QLKSModel.PHONG" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__CT_HOADON__MADV__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__CT_HOADON__MAHD__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__HOADON__MANV__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__HOADON__MAPDP__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__PHONG__MALOAI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__NHANVIEN__MANHOM__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__PHIEUDATPH__MANV__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__NHOMQUYEN__MAQ__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.FK__PHIEUDATPH__MAPH__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="HQT_QLKSModel.CT_PHIEUDATPHONG" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

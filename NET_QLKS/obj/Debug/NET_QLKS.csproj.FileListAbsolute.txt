@@ -1,0 +1,98 @@
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\NET_QLKS.exe.config
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\NET_QLKS.exe
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\NET_QLKS.pdb
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\EntityFramework.dll
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\EntityFramework.SqlServer.dll
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\Guna.UI2.dll
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\EntityFramework.xml
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\EntityFramework.SqlServer.xml
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.csproj.AssemblyReference.cache
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.csproj.SuggestedBindingRedirects.cache
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.DangNhap.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.Properties.Resources.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.csproj.GenerateResource.cache
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.csproj.CoreCompileInputs.cache
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.csproj.CopyComplete
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.exe
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.pdb
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.TrangChu.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.Phong.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.TrangChinh.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.Dichvu.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.DatPhong.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.CT_PhieuDatPhong.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.HoaDon.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.CT_HOADON.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.KhachHang.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.NhanVien.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.TT_HD.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.TT_PDP.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.TC_HD.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\obj\Debug\NET_QLKS.TC_PDP.resources
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\Guna.Charts.WinForms.dll
+F:\Đồ Án Web\NET_QLKS\NET_QLKS\bin\Debug\Guna.Charts.WinForms.xml
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\NET_QLKS.exe.config
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\NET_QLKS.exe
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\NET_QLKS.pdb
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\EntityFramework.dll
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\EntityFramework.SqlServer.dll
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\Guna.Charts.WinForms.dll
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\Guna.UI2.dll
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\EntityFramework.xml
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\EntityFramework.SqlServer.xml
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\bin\Debug\Guna.Charts.WinForms.xml
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.csproj.AssemblyReference.cache
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.csproj.SuggestedBindingRedirects.cache
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.CT_HoaDon.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.CT_PhieuDatPhong.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.DangNhap.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.DatPhong.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.Dichvu.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.HoaDon.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.KhachHang.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.NhanVien.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.Phong.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.Properties.Resources.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.TC_HD.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.TC_PDP.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.TrangChinh.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.TrangChu.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.TT_HD.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.TT_PDP.resources
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.csproj.GenerateResource.cache
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.csproj.CoreCompileInputs.cache
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.csproj.CopyComplete
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.exe
+F:\Đồ Án Web\NET_QLKS - Copy\NET_QLKS\obj\Debug\NET_QLKS.pdb
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\NET_QLKS.exe.config
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\NET_QLKS.exe
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\NET_QLKS.pdb
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\EntityFramework.dll
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\Guna.UI2.dll
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\EntityFramework.xml
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\bin\Debug\Guna.Charts.WinForms.xml
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.csproj.AssemblyReference.cache
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.CT_HoaDon.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.CT_PhieuDatPhong.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.DangNhap.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.DatPhong.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.Dichvu.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.HoaDon.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.KhachHang.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.NhanVien.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.Phong.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.Properties.Resources.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.TC_HD.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.TC_PDP.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.TrangChinh.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.TrangChu.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.TT_HD.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.TT_PDP.resources
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.csproj.GenerateResource.cache
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.csproj.CoreCompileInputs.cache
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.csproj.CopyComplete
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.exe
+C:\Users\hoang\Downloads\HQT_QLKS\Nhom2_TranHoangAnhKhoi\NET_QLKS\obj\Debug\NET_QLKS.pdb

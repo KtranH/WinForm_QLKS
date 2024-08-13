@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NET_QLKSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CT_PHIEUDATPHONG">
+    <Key>
+      <PropertyRef Name="MAPDP" />
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAPDP" Type="int" Nullable="false" />
+    <Property Name="MAKH" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DICHVU">
+    <Key>
+      <PropertyRef Name="MADV" />
+    </Key>
+    <Property Name="MADV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENDV" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIADV" Type="float" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MAPDP" />
+    </Key>
+    <Property Name="MAHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAPDP" Type="int" Nullable="false" />
+    <Property Name="MANV" Type="int" />
+    <Property Name="MADV" Type="int" />
+    <Property Name="NGAYLAP" Type="date" />
+    <Property Name="THANHTIEN" Type="float" />
+  </EntityType>
+  <EntityType Name="KHACH">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="CCCD" Type="varchar" MaxLength="50" />
+    <Property Name="SDT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LOAIPHONG">
+    <Key>
+      <PropertyRef Name="MALOAI" />
+    </Key>
+    <Property Name="MALOAI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENLOAI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SUCCHUA" Type="int" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENNV" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYSINH" Type="date" />
+    <Property Name="TENTK" Type="varchar" MaxLength="50" />
+    <Property Name="PASSNV" Type="varchar" MaxLength="50" />
+    <Property Name="QUEQUAN" Type="varchar" MaxLength="50" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="MANHOMPQ" Type="int" />
+  </EntityType>
+  <EntityType Name="NHOMQUYEN">
+    <Key>
+      <PropertyRef Name="MANHOMPQ" />
+    </Key>
+    <Property Name="MANHOMPQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAQ" Type="int" />
+  </EntityType>
+  <EntityType Name="PHANQUYEN">
+    <Key>
+      <PropertyRef Name="MAQ" />
+    </Key>
+    <Property Name="MAQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CHUCNANG" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PHIEUDATPHONG">
+    <Key>
+      <PropertyRef Name="MAPDP" />
+    </Key>
+    <Property Name="MAPDP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAPH" Type="int" />
+    <Property Name="NGAYDAT" Type="date" />
+  </EntityType>
+  <EntityType Name="PHONG">
+    <Key>
+      <PropertyRef Name="MAPH" />
+    </Key>
+    <Property Name="MAPH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENPHONG" Type="nvarchar" MaxLength="50" />
+    <Property Name="VITRI" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIATHUE" Type="float" />
+    <Property Name="TINHTRANG" Type="nvarchar" MaxLength="50" />
+    <Property Name="MALOAI" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__CT_PHIEUD__MAPDP__4AB81AF0">
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="1" />
+    <End Role="CT_PHIEUDATPHONG" Type="Self.CT_PHIEUDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUDATPHONG">
+        <PropertyRef Name="MAPDP" />
+      </Principal>
+      <Dependent Role="CT_PHIEUDATPHONG">
+        <PropertyRef Name="MAPDP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CT_PHIEUDA__MAKH__4BAC3F29">
+    <End Role="KHACH" Type="Self.KHACH" Multiplicity="1" />
+    <End Role="CT_PHIEUDATPHONG" Type="Self.CT_PHIEUDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="CT_PHIEUDATPHONG">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MADV__5070F446">
+    <End Role="DICHVU" Type="Self.DICHVU" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DICHVU">
+        <PropertyRef Name="MADV" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MADV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MANV__4E88ABD4">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MAPDP__4F7CD00D">
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUDATPHONG">
+        <PropertyRef Name="MAPDP" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MAPDP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NHANVIEN__MANHOM__3C69FB99">
+    <End Role="NHOMQUYEN" Type="Self.NHOMQUYEN" Multiplicity="0..1" />
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOMQUYEN">
+        <PropertyRef Name="MANHOMPQ" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="MANHOMPQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NHOMQUYEN__MAQ__398D8EEE">
+    <End Role="PHANQUYEN" Type="Self.PHANQUYEN" Multiplicity="0..1" />
+    <End Role="NHOMQUYEN" Type="Self.NHOMQUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHANQUYEN">
+        <PropertyRef Name="MAQ" />
+      </Principal>
+      <Dependent Role="NHOMQUYEN">
+        <PropertyRef Name="MAQ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHIEUDATPH__MAPH__47DBAE45">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="0..1" />
+    <End Role="PHIEUDATPHONG" Type="Self.PHIEUDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MAPH" />
+      </Principal>
+      <Dependent Role="PHIEUDATPHONG">
+        <PropertyRef Name="MAPH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHONG__MALOAI__412EB0B6">
+    <End Role="LOAIPHONG" Type="Self.LOAIPHONG" Multiplicity="0..1" />
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIPHONG">
+        <PropertyRef Name="MALOAI" />
+      </Principal>
+      <Dependent Role="PHONG">
+        <PropertyRef Name="MALOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NET_QLKSModelStoreContainer">
+    <EntitySet Name="CT_PHIEUDATPHONG" EntityType="Self.CT_PHIEUDATPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DICHVU" EntityType="Self.DICHVU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACH" EntityType="Self.KHACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIPHONG" EntityType="Self.LOAIPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHOMQUYEN" EntityType="Self.NHOMQUYEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHANQUYEN" EntityType="Self.PHANQUYEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUDATPHONG" EntityType="Self.PHIEUDATPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CT_PHIEUD__MAPDP__4AB81AF0" Association="Self.FK__CT_PHIEUD__MAPDP__4AB81AF0">
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONG" />
+      <End Role="CT_PHIEUDATPHONG" EntitySet="CT_PHIEUDATPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CT_PHIEUDA__MAKH__4BAC3F29" Association="Self.FK__CT_PHIEUDA__MAKH__4BAC3F29">
+      <End Role="KHACH" EntitySet="KHACH" />
+      <End Role="CT_PHIEUDATPHONG" EntitySet="CT_PHIEUDATPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MADV__5070F446" Association="Self.FK__HOADON__MADV__5070F446">
+      <End Role="DICHVU" EntitySet="DICHVU" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MANV__4E88ABD4" Association="Self.FK__HOADON__MANV__4E88ABD4">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MAPDP__4F7CD00D" Association="Self.FK__HOADON__MAPDP__4F7CD00D">
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONG" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NHANVIEN__MANHOM__3C69FB99" Association="Self.FK__NHANVIEN__MANHOM__3C69FB99">
+      <End Role="NHOMQUYEN" EntitySet="NHOMQUYEN" />
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NHOMQUYEN__MAQ__398D8EEE" Association="Self.FK__NHOMQUYEN__MAQ__398D8EEE">
+      <End Role="PHANQUYEN" EntitySet="PHANQUYEN" />
+      <End Role="NHOMQUYEN" EntitySet="NHOMQUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHIEUDATPH__MAPH__47DBAE45" Association="Self.FK__PHIEUDATPH__MAPH__47DBAE45">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="PHIEUDATPHONG" EntitySet="PHIEUDATPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHONG__MALOAI__412EB0B6" Association="Self.FK__PHONG__MALOAI__412EB0B6">
+      <End Role="LOAIPHONG" EntitySet="LOAIPHONG" />
+      <End Role="PHONG" EntitySet="PHONG" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
